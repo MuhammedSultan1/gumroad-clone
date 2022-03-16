@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'last_name' => 'User',
             'email' => 'admin@example.com',
             'password' => bcrypt('password'),
-            'type' => User::ADMIN,
+            'user_type' => User::ADMIN,
         ]);
         // Merchant Users
         User::factory()->create([
@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'last_name' => 'User',
             'email'         => 'Avery@example.com',
             'password'      => bcrypt('password'),
-            'type'          => User::MERCHANT,
+            'user_type'          => User::MERCHANT,
         ]);
 
         User::factory()->create([
@@ -36,7 +36,7 @@ class UserSeeder extends Seeder
             'last_name' => 'User',
             'email'         => 'Hannah@example.com',
             'password'      => bcrypt('password'),
-            'type'          => User::MERCHANT,
+            'user_type'          => User::MERCHANT,
         ]);
 
         User::factory()->create([
@@ -44,7 +44,7 @@ class UserSeeder extends Seeder
             'last_name' => 'User',
             'email'         => 'Fred@example.com',
             'password'      => bcrypt('password'),
-            'type'          => User::MERCHANT,
+            'user_type'          => User::MERCHANT,
         ]);
 
         // Default Users
@@ -53,7 +53,7 @@ class UserSeeder extends Seeder
             'last_name' => 'User',
             'email'         => 'Max@example.com',
             'password'      => bcrypt('password'),
-            'type'          => User::DEFAULT,
+            'user_type'          => User::DEFAULT,
         ]);
 
         User::factory()->create([
@@ -61,21 +61,21 @@ class UserSeeder extends Seeder
             'last_name' => 'User',
             'email'         => 'steve@example.com',
             'password'      => bcrypt('password'),
-            'type'          => User::DEFAULT,
+            'user_type'          => User::DEFAULT,
         ]);
         User::factory()->create([
             'first_name' => 'Jeff',
             'last_name' => 'User',
             'email'         => 'Jeff@example.com',
             'password'      => bcrypt('password'),
-            'type'          => User::DEFAULT,
+            'user_type'          => User::DEFAULT,
         ]);
         User::factory()->create([
             'first_name' => 'patrick',
             'last_name' => 'User',
             'email'         => 'patrick@example.com',
             'password'      => bcrypt('password'),
-            'type'          => User::DEFAULT,
+            'user_type'          => User::DEFAULT,
         ]);
     }
 }
