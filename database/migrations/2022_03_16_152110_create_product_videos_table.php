@@ -15,7 +15,13 @@ return new class extends Migration
     {
         Schema::create('product_videos', function (Blueprint $table) {
             $table->id();
+            $table->string('file_path');
+            $table->string('caption');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('product_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
