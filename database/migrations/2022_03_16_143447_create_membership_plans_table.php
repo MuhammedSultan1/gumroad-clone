@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('membership_plans', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->text('description');
+            $table->string('stripe_name');
+            $table->string('stripe_product_id');
+            $table->string('stripe_price_id');
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }
