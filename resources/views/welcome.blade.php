@@ -1,30 +1,30 @@
 @extends('templates.main')
 
 @section('content')
-        <div class="dark:bg-gray-900">
+        <div class="dark:bg-gray-900 bg-cyan-50">
             <div class="flex flex-col lg:flex-row items-stretch justify-between lg:px-0 px-6 lg:py-20 py-8 2xl:mx-auto 2xl:container">
                 <div class="z-30 relative lg:w-1/2">
-                    <div class="hidden dark:bg-gray-800 bg-gray-100 w-full lg:w-10/12 lg:h-full lg:flex justify-end items-center">
+                    <div class="hidden dark:bg-gray-800 bg-cyan-100 w-full lg:w-10/12 lg:h-full lg:flex justify-end items-center">
                         <div class="w-full lg:w-auto lg:-mr-32">
                             <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="image with decent chairs" class="w-full relative z-30 lg:pl-20 px-6 py-14" />
                         </div>
                     </div>
-                    <div class="absolute top-0 dark:bg-gray-800 bg-gray-100 md:h-96 w-full hidden md:block lg:hidden"></div>
+                    <div class="absolute top-0 dark:bg-gray-800 bg-cyan-50 md:h-96 w-full hidden md:block lg:hidden"></div>
                     <div class="w-full h-full lg:hidden">
                         <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="image with decent chairs" class="w-full relative z-30 lg:pl-20 md:px-6 py-5 md:py-14" />
                     </div>
                 </div>
-                <div class="bg-gray-100 dark:bg-gray-800 lg:w-1/2 lg:ml-12 lg:p-14 p-8 flex items-center">
+                <div class="bg-cyan-100 dark:bg-gray-800 lg:w-1/2 lg:ml-12 lg:p-14 p-8 flex items-center">
                     <div>
                         <h1 class="dark:text-white md:w-8/12 lg:w-10/12 xl:8/12 2xl:w-8/12 w-full xl:text-6xl sm:text-5xl text-4xl font-semibold text-gray-800 capitalize">Modern Interior Decor</h1>
                         <p class="dark:text-gray-300 md:w-9/12 lg:w-11/12 xl:w-10/12 2xl:9/12 text-base leading-normal text-gray-600 mt-5">Get inspired by our curated selection of luxiwood interiors. We hope get inspired to have luxiwood interior yourself. You’ll find tips here where you can buy a lot of cool furniture,decorations, plants, etc.</p>
-                        <button class="btn mt-2">Get Started</button>
+                        <button class="rounded-full m-2 py-2 px-6 bg-rose-600 text-cyan-50">Get Started</button>
                     </div>
                 </div>
             </div>
         </div>
 {{-- Content --}}
-        <section class="text-gray-600 body-font">
+        <section class="text-gray-600 body-font bg-cyan-50">
   <div class="container px-5 py-24 mx-auto">
     <div class="text-center mb-20">
       <h1 class="text-6xl font-medium title-font text-gray-900 mb-4">What is DigitalCart?</h1>
@@ -34,7 +34,7 @@
 </section>
 {{-- End Content --}}
 {{-- Beginning of section: Sell almost anything! --}}
-<section class="text-gray-600 body-font">
+<section class="text-gray-600 body-font bg-cyan-50">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Sell almost anything!</h1>
@@ -88,7 +88,7 @@
 </section>
 {{-- End of section: Sell almost anything! --}}
 {{-- Beginning of section: Get started in 3 steps --}}
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-cyan-50">
   <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
     <div>
       <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -115,7 +115,7 @@
   </div>
   <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
     <div class="sm:text-center">
-      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-indigo-50 sm:mx-auto">
+      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-pink-200 sm:mx-auto">
         1
       </div>
       <h6 class="mb-2 font-semibold leading-5">Slugging catcher</h6>
@@ -125,7 +125,7 @@
       <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
     </div>
     <div class="sm:text-center">
-      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-indigo-50 sm:mx-auto">
+      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-pink-200 sm:mx-auto">
         2
       </div>
       <h6 class="mb-2 font-semibold leading-5">Do your best</h6>
@@ -135,7 +135,7 @@
       <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
     </div>
     <div class="sm:text-center">
-      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-indigo-50 sm:mx-auto">
+      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-pink-200 sm:mx-auto">
         3
       </div>
       <h6 class="mb-2 font-semibold leading-5">Be yourself</h6>
@@ -148,16 +148,9 @@
 </div>
 {{-- End of section: Get started in 3 steps --}}
 {{-- Beginning of section: View Analytics --}}
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-cyan-50">
   <div class="grid gap-10 lg:grid-cols-2">
     <div class="lg:pr-10">
-      <a href="/" aria-label="Go Home" title="Logo" class="inline-block mb-5">
-        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-          <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-          </svg>
-        </div>
-      </a>
       <h5 class="mb-4 text-4xl font-extrabold leading-none">
             View analytics and<br class="hidden md:block" />
         <span class="inline-block text-deep-purple-accent-400">reports with our dashboard</span>
@@ -166,37 +159,6 @@
         Our dashboard shows you all of your sales. It also shows you the products which are purchased the most.
       </p>
       <hr class="mb-5 border-gray-300" />
-      <div class="flex items-center space-x-4">
-        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
-            <path
-              d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
-            ></path>
-          </svg>
-        </a>
-        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-          <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
-            <circle cx="15" cy="15" r="4"></circle>
-            <path
-              d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
-            ></path>
-          </svg>
-        </a>
-        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
-            <path
-              d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
-            ></path>
-          </svg>
-        </a>
-        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="h-6">
-            <path
-              d="M23.8,7.2c0,0-0.2-1.7-1-2.4c-0.9-1-1.9-1-2.4-1C17,3.6,12,3.6,12,3.6h0c0,0-5,0-8.4,0.2 c-0.5,0.1-1.5,0.1-2.4,1c-0.7,0.7-1,2.4-1,2.4S0,9.1,0,11.1v1.8c0,1.9,0.2,3.9,0.2,3.9s0.2,1.7,1,2.4c0.9,1,2.1,0.9,2.6,1 c1.9,0.2,8.2,0.2,8.2,0.2s5,0,8.4-0.3c0.5-0.1,1.5-0.1,2.4-1c0.7-0.7,1-2.4,1-2.4s0.2-1.9,0.2-3.9v-1.8C24,9.1,23.8,7.2,23.8,7.2z M9.5,15.1l0-6.7l6.5,3.4L9.5,15.1z"
-            ></path>
-          </svg>
-        </a>
-      </div>
     </div>
     <div>
       <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src="https://windmillui.com/img/Dashboard.png" alt="" />
@@ -205,7 +167,7 @@
 </div>
 {{-- End of section: View Analytics --}}
 {{-- Beginning of section: See who uses DigitalCart! --}}
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-cyan-50">
   <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
     <h2 class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
       <span class="inline-block mb-1 sm:mb-4">
@@ -258,7 +220,7 @@
 </div>
 {{-- End of section: See who uses DigitalCart! --}}
 {{-- Beginning of testimonials --}}
-<section class="bg-purple-50">
+<section class="bg-cyan-50">
   <div class="px-4 py-32 mx-auto max-w-7xl">
     <div class="grid items-center w-full grid-cols-1 gap-10 mx-auto lg:grid-cols-8 lg:gap-4 xl:w-3/4">
       <div class="w-40 h-40 col-span-1 lg:col-span-2">
@@ -275,11 +237,11 @@
 </section>
 {{-- End of testimonials --}}
 {{-- Beginning of section: Get Started --}}
-<section class="text-gray-600 body-font bg-blue-500">
+<section class="text-gray-600 body-font bg-cyan-50">
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-      <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-100">Ready to set up your own online store?</h1>
-              <button class="flex-shrink-0 border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-100 bg-white text-blue-600 hover:bg-blue-300 rounded text-lg font-semibold mt-10 sm:mt-0">Get Started &#8594;</button>
+      <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font">Ready to set up your own online store?</h1>
+              <button class="flex-shrink-0 border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-100 bg-rose-600 text-cyan-50 rounded text-lg font-semibold mt-10 sm:mt-0">Get Started &#8594;</button>
     </div>
   </div>
 </section>

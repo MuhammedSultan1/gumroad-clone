@@ -10,7 +10,7 @@
 </head>
 <body>
     {{-- Navbar --}}
-<div class="navbar bg-base-100">
+<div class="navbar bg-cyan-50">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -50,14 +50,14 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn">Login</a>
+    <button class="rounded-full m-2 py-2 px-6 bg-rose-600 text-cyan-50">Login</button>
   </div>
 </div>
 {{-- End Navbar --}}
 @yield('content')
 
 {{-- Footer --}}
-<footer class="footer footer-center p-10 bg-base-100 text-base-content rounded">
+<footer class="footer footer-center p-10 bg-cyan-50 text-base-content rounded">
   <div class="grid grid-flow-col gap-4">
     <a class="link link-hover">About us</a>
     <a class="link link-hover">Contact</a>
