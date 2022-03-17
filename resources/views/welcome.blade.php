@@ -1,8 +1,6 @@
 @extends('templates.main')
 
 @section('content')
-
-
         <div class="dark:bg-gray-900">
             <div class="flex flex-col lg:flex-row items-stretch justify-between lg:px-0 px-6 lg:py-20 py-8 2xl:mx-auto 2xl:container">
                 <div class="z-30 relative lg:w-1/2">
@@ -20,13 +18,7 @@
                     <div>
                         <h1 class="dark:text-white md:w-8/12 lg:w-10/12 xl:8/12 2xl:w-8/12 w-full xl:text-6xl sm:text-5xl text-4xl font-semibold text-gray-800 capitalize">Modern Interior Decor</h1>
                         <p class="dark:text-gray-300 md:w-9/12 lg:w-11/12 xl:w-10/12 2xl:9/12 text-base leading-normal text-gray-600 mt-5">Get inspired by our curated selection of luxiwood interiors. We hope get inspired to have luxiwood interior yourself. You’ll find tips here where you can buy a lot of cool furniture,decorations, plants, etc.</p>
-                        <button class="dark:bg-white dark:hover:bg-gray-400 dark:hover:text-gray-100 dark:text-gray-800 sm:w-auto w-full mt-8 text-base justify-between focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 focus:outline-none hover:bg-gray-700 font-medium leading-none text-white py-4 px-8 bg-gray-800 flex items-center">
-                            Explore
-                            <div class="ml-2 mt-0.5">
-                                <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/hero-VIII-svg1.svg" alt="arrow">
-                                <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/hero-VIII-svg1dark.svg" alt="arrow">
-                            </div>
-                        </button>
+                        <button class="btn mt-2">Get Started</button>
                     </div>
                 </div>
             </div>
@@ -37,64 +29,7 @@
     <div class="text-center mb-20">
       <h1 class="text-6xl font-medium title-font text-gray-900 mb-4">What is DigitalCart?</h1>
       <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">DigitalCart is the number one best place to set up your own store and sell products online to people around the world.</p>
-      {{-- <div class="flex mt-6 justify-center">
-        <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
-      </div> --}}
     </div>
-    {{-- <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-      <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-        <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-          </svg>
-        </div>
-        <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-        <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-            <circle cx="6" cy="6" r="3"></circle>
-            <circle cx="6" cy="18" r="3"></circle>
-            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-          </svg>
-        </div>
-        <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">The Catalyzer</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-        <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </div>
-        <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Neptune</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div> --}}
-    {{-- <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> --}}
   </div>
 </section>
 {{-- End Content --}}
@@ -108,75 +43,47 @@
     <div class="flex flex-wrap -m-4">
       <div class="xl:w-1/3 md:w-1/2 p-4">
         <div class="border border-gray-200 p-6 rounded-lg">
-          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
+         <img src="https://img.icons8.com/fluency/48/000000/books.png"/>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Books</h2>
           <p class="leading-relaxed text-base">Once you start selling books with DigitalCart, you won't have any more books to sell!</p>
         </div>
       </div>
       <div class="xl:w-1/3 md:w-1/2 p-4">
         <div class="border border-gray-200 p-6 rounded-lg">
-          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <circle cx="6" cy="6" r="3"></circle>
-              <circle cx="6" cy="18" r="3"></circle>
-              <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-            </svg>
-          </div>
+            <img src="https://img.icons8.com/color/48/000000/furniture.png"/>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Furniture</h2>
           <p class="leading-relaxed text-base">You can sell your highest quality furniture here!</p>
         </div>
       </div>
       <div class="xl:w-1/3 md:w-1/2 p-4">
         <div class="border border-gray-200 p-6 rounded-lg">
-          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
+           <img src="https://img.icons8.com/fluency/48/000000/clothes.png"/>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Clothing</h2>
           <p class="leading-relaxed text-base">Sell different types of clothes with DigitalCart!</p>
         </div>
       </div>
       <div class="xl:w-1/3 md:w-1/2 p-4">
         <div class="border border-gray-200 p-6 rounded-lg">
-          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
-            </svg>
-          </div>
+       <img src="https://img.icons8.com/color/48/000000/basketball.png"/>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Sporting Goods</h2>
           <p class="leading-relaxed text-base">You can sell basketball gear, soccer gear, gym equipment and more!</p>
         </div>
       </div>
       <div class="xl:w-1/3 md:w-1/2 p-4">
         <div class="border border-gray-200 p-6 rounded-lg">
-          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-            </svg>
-          </div>
+        <img src="https://img.icons8.com/fluency/48/000000/car.png"/>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Auto Parts</h2>
           <p class="leading-relaxed text-base">Sell the parts that people need for their vehicles!</p>
         </div>
       </div>
       <div class="xl:w-1/3 md:w-1/2 p-4">
         <div class="border border-gray-200 p-6 rounded-lg">
-          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-          </div>
+            <img src="https://img.icons8.com/color/48/000000/tv.png"/>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Technology</h2>
           <p class="leading-relaxed text-base">Sell TV screens, laptops, cell phones and more!</p>
         </div>
       </div>
     </div>
-    <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
   </div>
 </section>
 {{-- End of section: Sell almost anything! --}}
@@ -368,31 +275,14 @@
 </section>
 {{-- End of testimonials --}}
 {{-- Beginning of section: Get Started --}}
-<section class="w-full bg-gradient-to-b from-gray-100 to-white">
-  <div class="w-full px-4 py-20 mx-auto text-left md:text-center md:w-3/4 lg:w-2/4">
-    <p class="mb-2 text-base font-semibold text-purple-700">Start your free trial now</p>
-    <h2 class="mb-6 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">Sign up for a free account to organize your customer feedback.</h2>
-    <div class="mb-0 space-x-0 md:space-x-2">
-      <a class="inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
-        Get Started
-        <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-      </a>
-      <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#">
-        Book a Demo
-        <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path
-            fill-rule="evenodd"
-            d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </a>
+<section class="text-gray-600 body-font bg-blue-500">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+      <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-100">Ready to set up your own online store?</h1>
+              <button class="flex-shrink-0 border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-100 bg-white text-blue-600 hover:bg-blue-300 rounded text-lg font-semibold mt-10 sm:mt-0">Get Started &#8594;</button>
     </div>
   </div>
 </section>
-
 {{-- End of section: Get Started --}}
 
 @endsection
