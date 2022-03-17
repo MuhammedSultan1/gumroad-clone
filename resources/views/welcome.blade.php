@@ -180,5 +180,194 @@
   </div>
 </section>
 {{-- End of section: Sell almost anything! --}}
+{{-- Beginning of section: Get started in 3 steps --}}
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+    <div>
+      <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+        Brand new
+      </p>
+    </div>
+    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+      <span class="relative inline-block">
+        <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+          <defs>
+            <pattern id="bfcc89c7-3b4a-491a-bc7e-53e26502ff69" x="0" y="0" width=".135" height=".30">
+              <circle cx="1" cy="1" r=".7"></circle>
+            </pattern>
+          </defs>
+          <rect fill="url(#bfcc89c7-3b4a-491a-bc7e-53e26502ff69)" width="52" height="24"></rect>
+        </svg>
+        <span class="relative">The</span>
+      </span>
+      quick, brown fox jumps over a lazy dog
+    </h2>
+    <p class="text-base text-gray-700 md:text-lg">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
+    </p>
+  </div>
+  <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
+    <div class="sm:text-center">
+      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-indigo-50 sm:mx-auto">
+        1
+      </div>
+      <h6 class="mb-2 font-semibold leading-5">Slugging catcher</h6>
+      <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+        Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap of thunder
+      </p>
+      <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+    </div>
+    <div class="sm:text-center">
+      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-indigo-50 sm:mx-auto">
+        2
+      </div>
+      <h6 class="mb-2 font-semibold leading-5">Do your best</h6>
+      <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+        They urge you to put down your sword and come join the winners. In 22 years the only 'winners'
+      </p>
+      <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+    </div>
+    <div class="sm:text-center">
+      <div class="flex items-center justify-center w-24 h-24 mb-4 text-5xl font-extrabold rounded-full text-deep-purple-accent-400 bg-indigo-50 sm:mx-auto">
+        3
+      </div>
+      <h6 class="mb-2 font-semibold leading-5">Be yourself</h6>
+      <p class="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+        Tell them I hate them. Is the Space Pope reptilian!? Tell her she looks thin. Hello, little man
+      </p>
+      <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+    </div>
+  </div>
+</div>
+{{-- End of section: Get started in 3 steps --}}
+{{-- Beginning of section: View Analytics --}}
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="grid gap-10 lg:grid-cols-2">
+    <div class="lg:pr-10">
+      <a href="/" aria-label="Go Home" title="Logo" class="inline-block mb-5">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+          <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+          </svg>
+        </div>
+      </a>
+      <h5 class="mb-4 text-4xl font-extrabold leading-none">
+            View analytics and<br class="hidden md:block" />
+        <span class="inline-block text-deep-purple-accent-400">reports with our dashboard</span>
+      </h5>
+      <p class="mb-6 text-gray-900">
+        Our dashboard shows you all of your sales. It also shows you the products which are purchased the most.
+      </p>
+      <hr class="mb-5 border-gray-300" />
+      <div class="flex items-center space-x-4">
+        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+            <path
+              d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
+            ></path>
+          </svg>
+        </a>
+        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+          <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+            <circle cx="15" cy="15" r="4"></circle>
+            <path
+              d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
+            ></path>
+          </svg>
+        </a>
+        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+            <path
+              d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+            ></path>
+          </svg>
+        </a>
+        <a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-6">
+            <path
+              d="M23.8,7.2c0,0-0.2-1.7-1-2.4c-0.9-1-1.9-1-2.4-1C17,3.6,12,3.6,12,3.6h0c0,0-5,0-8.4,0.2 c-0.5,0.1-1.5,0.1-2.4,1c-0.7,0.7-1,2.4-1,2.4S0,9.1,0,11.1v1.8c0,1.9,0.2,3.9,0.2,3.9s0.2,1.7,1,2.4c0.9,1,2.1,0.9,2.6,1 c1.9,0.2,8.2,0.2,8.2,0.2s5,0,8.4-0.3c0.5-0.1,1.5-0.1,2.4-1c0.7-0.7,1-2.4,1-2.4s0.2-1.9,0.2-3.9v-1.8C24,9.1,23.8,7.2,23.8,7.2z M9.5,15.1l0-6.7l6.5,3.4L9.5,15.1z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src="https://windmillui.com/img/Dashboard.png" alt="" />
+    </div>
+  </div>
+</div>
+{{-- End of section: View Analytics --}}
+{{-- Beginning of section: See who uses DigitalCart! --}}
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+    <h2 class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
+      <span class="inline-block mb-1 sm:mb-4">
+        See who uses DigitalCart!
+      </span>
+      <div class="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100"></div>
+    </h2>
+    <p class="text-gray-700 lg:text-sm lg:max-w-md">
+      "Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut perspiciatis unde omnis iste."
+    </p>
+  </div>
+  <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
+      <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80" alt="" />
+        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+          <p class="text-sm font-medium tracking-wide text-white">
+            James Mcmillan sells books
+          </p>
+        </div>
+      </div>
 
+      <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.unsplash.com/photo-1646372647065-b858ac3213a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3027&q=80" alt="" />
+        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+          <p class="text-sm font-medium tracking-wide text-white">
+            Jeremy Howard sells furniture
+          </p>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="" />
+        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+          <p class="text-sm font-medium tracking-wide text-white">
+            Kyle Winters sells shoes
+          </p>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="" />
+        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+          <p class="text-sm font-medium tracking-wide text-white">
+            Philip Vance sells photography equipment
+          </p>
+        </div>
+      </div>
+
+  </div>
+</div>
+{{-- End of section: See who uses DigitalCart! --}}
+{{-- Beginning of testimonials --}}
+<section class="bg-purple-50">
+  <div class="px-4 py-32 mx-auto max-w-7xl">
+    <div class="grid items-center w-full grid-cols-1 gap-10 mx-auto lg:grid-cols-8 lg:gap-4 xl:w-3/4">
+      <div class="w-40 h-40 col-span-1 lg:col-span-2">
+        <img src="https://images.unsplash.com/photo-1564564244660-5d73c057f2d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2952&q=80" class="object-cover w-full h-full bg-center rounded-md shadow-xl" alt="Kutty" />
+      </div>
+      <div class="col-span-1 lg:col-span-6">
+        <h1 class="mb-3 text-2xl font-extrabold text-purple-900 md:leading-tight md:text-4xl">
+          “If a user sees <span class="text-red-600">an error</span>, we’re notified immediately. It’s silly not to use an error monitoring tool like this when running anything at scale.“
+        </h1>
+        <p class="mb-5 text-lg font-semibold text-purple-900 md:text-xl">- Praveen Juge, Important Guy</p>
+        <img src="/logos/google.svg" alt="Google Logo" class="block object-contain h-8" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{-- End of testimonials --}}
 @endsection
