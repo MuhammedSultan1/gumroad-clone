@@ -1,30 +1,30 @@
 @extends('templates.main')
 
 @section('content')
-        <div class="dark:bg-gray-900 bg-cyan-50">
+        <div class="dark:bg-gray-900 bg-white">
             <div class="flex flex-col lg:flex-row items-stretch justify-between lg:px-0 px-6 lg:py-20 py-8 2xl:mx-auto 2xl:container">
                 <div class="z-30 relative lg:w-1/2">
-                    <div class="hidden dark:bg-gray-800 bg-cyan-100 w-full lg:w-10/12 lg:h-full lg:flex justify-end items-center">
+                    <div class="hidden dark:bg-gray-800 bg-gray-100 w-full lg:w-10/12 lg:h-full lg:flex justify-end items-center">
                         <div class="w-full lg:w-auto lg:-mr-32">
                             <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="image with decent chairs" class="w-full relative z-30 lg:pl-20 px-6 py-14" />
                         </div>
                     </div>
-                    <div class="absolute top-0 dark:bg-gray-800 bg-cyan-50 md:h-96 w-full hidden md:block lg:hidden"></div>
+                    <div class="absolute top-0 dark:bg-gray-800 bg-white md:h-96 w-full hidden md:block lg:hidden"></div>
                     <div class="w-full h-full lg:hidden">
                         <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="image with decent chairs" class="w-full relative z-30 lg:pl-20 md:px-6 py-5 md:py-14" />
                     </div>
                 </div>
-                <div class="bg-cyan-100 dark:bg-gray-800 lg:w-1/2 lg:ml-12 lg:p-14 p-8 flex items-center">
+                <div class="bg-gray-100 dark:bg-gray-800 lg:w-1/2 lg:ml-12 lg:p-14 p-8 flex items-center">
                     <div>
                         <h1 class="dark:text-white md:w-8/12 lg:w-10/12 xl:8/12 2xl:w-8/12 w-full xl:text-6xl sm:text-5xl text-4xl font-semibold text-gray-800 capitalize">Modern Interior Decor</h1>
                         <p class="dark:text-gray-300 md:w-9/12 lg:w-11/12 xl:w-10/12 2xl:9/12 text-base leading-normal text-gray-600 mt-5">Get inspired by our curated selection of luxiwood interiors. We hope get inspired to have luxiwood interior yourself. You’ll find tips here where you can buy a lot of cool furniture,decorations, plants, etc.</p>
-                        <button class="rounded-full m-2 py-2 px-6 bg-rose-600 text-cyan-50">Get Started</button>
+                        <button class="rounded-full m-2 py-2 px-6 bg-gray-800 hover:bg-gray-900 text-white">Get Started</button>
                     </div>
                 </div>
             </div>
         </div>
 {{-- Content --}}
-        <section class="text-gray-600 body-font bg-cyan-50">
+        <section class="text-gray-600 body-font bg-white">
   <div class="container px-5 py-24 mx-auto">
     <div class="text-center mb-20">
       <h1 class="text-6xl font-medium title-font text-gray-900 mb-4">What is DigitalCart?</h1>
@@ -34,7 +34,7 @@
 </section>
 {{-- End Content --}}
 {{-- Beginning of section: Sell almost anything! --}}
-<section class="text-gray-600 body-font bg-cyan-50">
+<section class="text-gray-600 body-font bg-white">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Sell almost anything!</h1>
@@ -88,7 +88,7 @@
 </section>
 {{-- End of section: Sell almost anything! --}}
 {{-- Beginning of section: Get started in 3 steps --}}
-<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-cyan-50">
+<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-white">
   <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
     <div>
       <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -148,7 +148,7 @@
 </div>
 {{-- End of section: Get started in 3 steps --}}
 {{-- Beginning of section: View Analytics --}}
-<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-cyan-50">
+<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-white">
   <div class="grid gap-10 lg:grid-cols-2">
     <div class="lg:pr-10">
       <h5 class="mb-4 text-4xl font-extrabold leading-none">
@@ -167,7 +167,7 @@
 </div>
 {{-- End of section: View Analytics --}}
 {{-- Beginning of section: See who uses DigitalCart! --}}
-<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-cyan-50">
+<div class="px-4 py-16 md:px-24 lg:px-8 lg:py-20 bg-white">
   <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
     <h2 class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
       <span class="inline-block mb-1 sm:mb-4">
@@ -220,7 +220,7 @@
 </div>
 {{-- End of section: See who uses DigitalCart! --}}
 {{-- Beginning of testimonials --}}
-<section class="bg-cyan-50">
+<section class="bg-white">
   <div class="px-4 py-32 mx-auto max-w-7xl">
     <div class="grid items-center w-full grid-cols-1 gap-10 mx-auto lg:grid-cols-8 lg:gap-4 xl:w-3/4">
       <div class="w-40 h-40 col-span-1 lg:col-span-2">
@@ -237,11 +237,11 @@
 </section>
 {{-- End of testimonials --}}
 {{-- Beginning of section: Get Started --}}
-<section class="text-gray-600 body-font bg-cyan-50">
+<section class="text-gray-600 body-font bg-white">
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
       <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font">Ready to set up your own online store?</h1>
-              <button class="flex-shrink-0 border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-100 bg-rose-600 text-cyan-50 rounded text-lg font-semibold mt-10 sm:mt-0">Get Started &#8594;</button>
+              <button class="flex-shrink-0 border-0 py-2 px-8 focus:outline-none transition ease-in-out delay-100  m-2 bg-gray-800 hover:bg-gray-900 text-white rounded text-lg font-semibold mt-10 sm:mt-0">Get Started &#8594;</button>
     </div>
   </div>
 </section>
