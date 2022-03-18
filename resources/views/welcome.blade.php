@@ -1,4 +1,4 @@
-@extends('templates.main')
+@extends('layouts.main')
 
 @section('content')
         <div class="dark:bg-gray-900 bg-white">
