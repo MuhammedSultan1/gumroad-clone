@@ -17,6 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
+            $table->string('benefit_one');
+            $table->string('benefit_two');
+            $table->string('benefit_three');
+            $table->string('benefit_four');
             $table->text('description');
             $table->string('stripe_name');
             $table->string('stripe_product_id');
