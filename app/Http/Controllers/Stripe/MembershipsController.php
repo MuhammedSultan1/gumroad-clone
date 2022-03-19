@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Stripe;
 
+use App\Models\MembershipPlan;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,11 @@ class MembershipsController extends Controller
      */
     public function index()
     {
-        return view('pages.memberships.index');
+        $memberships = MembershipPlan::all();
+
+        return view('pages.memberships.index', [
+            'memberships' => $memberships,
+        ]);
     }
 
     /**
