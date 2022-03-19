@@ -78,12 +78,11 @@
               <p class="font-medium text-gray-300">SSL Certificates</p>
             </li>
           </ul>
-          <button
-            type="submit"
-            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+             <a href="#"
+            class="bg-purple-600 inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md hover:bg-purple-700 focus:shadow-outline focus:outline-none"
           >
             Get Now
-          </button>
+        </a>
         </div>
         <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
         <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
@@ -138,12 +137,11 @@
               <p class="font-medium text-gray-300">SSL Certificates</p>
             </li>
           </ul>
-          <button
-            type="submit"
+         <a href="#"
             class="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md bg-teal-400 hover:bg-teal-700 focus:shadow-outline focus:outline-none"
           >
             Get Now
-          </button>
+           </a>
         </div>
         <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
         <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
@@ -198,12 +196,11 @@
               <p class="font-medium text-gray-300">SSL Certificates</p>
             </li>
           </ul>
-          <button
-            type="submit"
+          <a href="#"
             class="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md bg-teal-400 hover:bg-teal-700 focus:shadow-outline focus:outline-none"
           >
             Get Now
-          </button>
+        </a>
         </div>
         <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
         <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
