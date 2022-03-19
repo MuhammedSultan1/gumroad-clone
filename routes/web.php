@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ROUTES RELATED TO STRIPE //
+
+// Subscriptions
+Route::get('/memberships', function () {
+    return view('pages.memberships.subscribe');
+});
+
+
 Route::get('/dashboard', function () {
     return view('pages.users.dashboard.index');
 })->middleware(['auth'])->name('dashboard');
