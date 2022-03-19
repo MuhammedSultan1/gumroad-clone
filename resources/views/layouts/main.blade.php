@@ -57,6 +57,8 @@
 {{-- End Navbar --}}
 @yield('content')
 
+@stack('scripts')
+
 {{-- Footer --}}
 <footer class="footer footer-center p-10 bg-white border-gray-100 border text-base-content rounded">
   <div class="grid grid-flow-col gap-4">
