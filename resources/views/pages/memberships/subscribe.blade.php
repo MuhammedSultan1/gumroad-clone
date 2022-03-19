@@ -17,45 +17,64 @@
                         @csrf
 
                         {{-- Hidden Inputs --}}
-
                         {{-- Plan --}}
-                        <input type="hidden" name="plan" id="plan" value="">
+                        <input type="hidden" name="plan" id="plan" value="{{ request('plan') }}">
                         {{-- Payment Method --}}
                         <input type="hidden" name="payment-method" id="payment-method">
+                        {{-- End of Hidden Inputs --}}
 
+                    {{-- Name --}}
+                    <div class="w-full">
                         <x-forms.label for="name" value="{{ __('Name') }}"/>
-                        <x-forms.input id="name" name="name" :value="auth()->user()->getName()"/>
-
+                        <x-forms.input id="card-holder-name" name="name" :value="auth()->user()->getName() ?? old('name')" autocomplete="name"/>
+                    </div>
+                    {{-- Email --}}
+                    <div class="w-full">
                         <x-forms.label for="email" value="{{ __('Email') }}"/>
                         <x-forms.input id="email" name="email" :value="auth()->user()->getEmail()" disabled/>
-
+                      </div>
+                    {{-- Address Line 1 --}}
+                      <div class="w-full">
                         <x-forms.label for="line1" value="{{ __('street, PO Box, or company name') }}"/>
                         <x-forms.input id="line1" name="line1"/>
-
+                      </div>
+                    {{-- Address Line 2 --}}
+                    <div class="w-full">
                         <x-forms.label for="line2" value="{{ __('apartment, suite, unit, or building') }}"/>
                         <x-forms.input id="line2" name="line2"/>
-
+                    </div>
+                    {{-- Postal Code --}}
+                      <div class="w-full">
                         <x-forms.label for="postal_code" value="{{ __('ZIP or postal code') }}"/>
                         <x-forms.input id="postal_code" name="postal_code"/>
-
+                    </div>
+                    {{-- City --}}
+                    <div class="w-full">
                         <x-forms.label for="city" value="{{ __('city') }}"/>
                         <x-forms.input id="city" name="city"/>
-
+                          </div>
+                    {{-- State --}}
+                    <div class="w-full">
                         <x-forms.label for="state" value="{{ __('state') }}"/>
                         <x-forms.input id="state" name="state"/>
-
+                    </div>
+                    {{-- Country --}}
+                    <div class="w-full">
                         <x-forms.label for="country" value="{{ __('country') }}"/>
                         <x-forms.input id="country" name="country"/>
+                    </div>
+                    {{-- Card Details --}}
+                    <div class="w-full">
+                        <x-forms.label for="card_no" value="{{ __('Card number / Information') }}"/>
+                        <div id="card-element" class="p-2"></div>
+                    </div>
 
-                        <x-forms.label for="country" value="{{ __('Card number') }}"/>
-                        <div id="card-element" class="p-2">
 
-                        </div>
 
                         <div id="card-errors" class="text-red-500 font-semibold"></div>
 
+                        <button id="card-button" data-secret="{{ $intent->client_secret }}" type="submit" class="bg-gray-900 focus:outline-none dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 py-4 w-full md:w-4/12 lg:w-full text-white">Proceed to payment</button>
                     </form>
-                    <button id="card-button" data-secret="{{ $intent->client_secret }}" type="submit" class="focus:outline-none dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Proceed to payment</button>
                     <div class="mt-4 flex justify-start items-center w-full">
                         <a href="javascript:void(0)" class="text-base leading-4 dark:text-gray-400 hover:underline focus:outline-none focus:text-gray-500 hover:text-gray-800 text-gray-600">Back to my bag</a>
                     </div>
@@ -90,4 +109,21 @@
                 </div>
             </div>
         </div>
+
+        @push('scripts')
+        <script src="https://js.stripe.com/v3/"></script>
+
+        <script>
+            const stripe = Stripe('{{ env("STRIPE_KEY") }}');
+
+            const elements = stripe.elements();
+            const cardElement = elements.create('card');
+            const cardHolderName = document.getElementById('card-holder-name');
+            const cardButton = document.getElementById('card-button');
+
+            const clientSecret = cardButton.dataset.secret;
+
+            cardElement.mount('#card-element');
+        </script>
+        @endpush
 @endsection
