@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// ROUTES RELATED TO STRIPE //
+// ROUTES RELATED TO MEMBERSHIPS //
 
 // Memberships
 Route::get('/memberships', [MembershipsController::class, 'index'])->name('memberships');
@@ -27,9 +27,18 @@ Route::get('/memberships', [MembershipsController::class, 'index'])->name('membe
 Route::get('/subscribe', [SubscriptionController::class, 'index'])->name('subscribe');
 Route::post('/subscribe', [SubscriptionController::class, 'post'])->name('subscribe.store');
 
+//Shop
+Route::get('/shop', function () {
+    return view('welcome');
+});
 
-Route::get('/dashboard', function () {
+
+Route::get('/users/dashboard', function () {
     return view('pages.users.dashboard.index');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth'])->name('user.dashboard');
+
+Route::get('/merchants/dashboard', function () {
+    return view('pages.merchants.dashboard.billing.index');
+})->middleware(['auth'])->name('merchant.dashboard');
 
 require __DIR__ . '/auth.php';
