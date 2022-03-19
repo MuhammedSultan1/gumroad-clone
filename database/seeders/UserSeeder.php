@@ -16,32 +16,28 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::factory()->count(1)->create([
-            'first_name' => 'Admin',
-            'last_name' => 'User',
+            'name' => 'Admin',
             'email' => 'admin@example.com',
             'password' => bcrypt('password'),
             'user_type' => User::ADMIN,
         ]);
         // Merchant Users
         User::factory()->create([
-            'first_name' => 'Avery',
-            'last_name' => 'User',
+            'name' => 'Avery',
             'email'         => 'Avery@example.com',
             'password'      => bcrypt('password'),
             'user_type'          => User::MERCHANT,
         ]);
 
         User::factory()->create([
-            'first_name' => 'Hannah',
-            'last_name' => 'User',
+            'name' => 'Hannah',
             'email'         => 'Hannah@example.com',
             'password'      => bcrypt('password'),
             'user_type'          => User::MERCHANT,
         ]);
 
         User::factory()->create([
-            'first_name' => 'Fred',
-            'last_name' => 'User',
+            'name' => 'Fred',
             'email'         => 'Fred@example.com',
             'password'      => bcrypt('password'),
             'user_type'          => User::MERCHANT,
@@ -49,30 +45,26 @@ class UserSeeder extends Seeder
 
         // Default Users
         User::factory()->create([
-            'first_name' => 'Max',
-            'last_name' => 'User',
+            'name' => 'Max',
             'email'         => 'Max@example.com',
             'password'      => bcrypt('password'),
             'user_type'          => User::DEFAULT,
         ]);
 
         User::factory()->create([
-            'first_name' => 'steve',
-            'last_name' => 'User',
+            'name' => 'steve',
             'email'         => 'steve@example.com',
             'password'      => bcrypt('password'),
             'user_type'          => User::DEFAULT,
         ]);
         User::factory()->create([
-            'first_name' => 'Jeff',
-            'last_name' => 'User',
+            'name' => 'Jeff',
             'email'         => 'Jeff@example.com',
             'password'      => bcrypt('password'),
             'user_type'          => User::DEFAULT,
         ]);
         User::factory()->create([
-            'first_name' => 'patrick',
-            'last_name' => 'User',
+            'name' => 'patrick',
             'email'         => 'patrick@example.com',
             'password'      => bcrypt('password'),
             'user_type'          => User::DEFAULT,
