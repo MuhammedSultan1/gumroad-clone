@@ -70,6 +70,15 @@
             </li>
           </ul>
           <ul>
+               <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="forms.html"
+              >
+                <img src="https://img.icons8.com/office/20/000000/shop.png"/>
+                <span class="ml-4">Go to shop</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
