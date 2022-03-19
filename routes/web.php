@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Stripe\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,8 @@ Route::get('/', function () {
 // ROUTES RELATED TO STRIPE //
 
 // Subscriptions
-Route::get('/memberships', function () {
-    return view('pages.memberships.subscribe');
-});
+Route::get('/memberships', [SubscriptionController::class, 'index'])->name('membership');
+Route::post('/memberships', [SubscriptionController::class, 'post'])->name('membership.store');
 
 
 Route::get('/dashboard', function () {
