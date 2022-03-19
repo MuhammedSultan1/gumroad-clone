@@ -26,7 +26,7 @@
                     {{-- Name --}}
                     <div class="w-full">
                         <x-forms.label for="name" value="{{ __('Name') }}"/>
-                        <x-forms.input id="card-holder-name" name="name" :value="auth()->user()->getName() ?? old('name')" autocomplete="name"/>
+                        <x-forms.input id="name" name="name" :value="auth()->user()->getName() ?? old('name')" autocomplete="name"/>
                     </div>
                     {{-- Email --}}
                     <div class="w-full">
@@ -36,37 +36,38 @@
                     {{-- Address Line 1 --}}
                       <div class="w-full">
                         <x-forms.label for="line1" value="{{ __('street, PO Box, or company name') }}"/>
-                        <x-forms.input id="line1" name="line1"/>
+                        <x-forms.input id="line1" name="line1" :value="auth()->user()->getLineOne() ?? old('line1')"/>
                       </div>
                     {{-- Address Line 2 --}}
                     <div class="w-full">
                         <x-forms.label for="line2" value="{{ __('apartment, suite, unit, or building') }}"/>
-                        <x-forms.input id="line2" name="line2"/>
+                        <x-forms.input id="line2" name="line2" :value="auth()->user()->getLineTwo() ?? old('line2')"/>
                     </div>
                     {{-- Postal Code --}}
                       <div class="w-full">
                         <x-forms.label for="postal_code" value="{{ __('ZIP or postal code') }}"/>
-                        <x-forms.input id="postal_code" name="postal_code"/>
+                        <x-forms.input id="postal_code" name="postal_code" :value="auth()->user()->getPostalCode() ?? old('postal_code')"/>
                     </div>
                     {{-- City --}}
                     <div class="w-full">
                         <x-forms.label for="city" value="{{ __('city') }}"/>
-                        <x-forms.input id="city" name="city"/>
+                        <x-forms.input id="city" name="city" :value="auth()->user()->getCity() ?? old('city')"/>
                           </div>
                     {{-- State --}}
                     <div class="w-full">
                         <x-forms.label for="state" value="{{ __('state') }}"/>
-                        <x-forms.input id="state" name="state"/>
+                        <x-forms.input id="state" name="state" :value="auth()->user()->getState() ?? old('state')"/>
                     </div>
                     {{-- Country --}}
                     <div class="w-full">
                         <x-forms.label for="country" value="{{ __('country') }}"/>
-                        <x-forms.input id="country" name="country"/>
+                        <x-forms.input id="country" name="country" :value="auth()->user()->getCountry() ?? old('country')"/>
                     </div>
                     {{-- Card Details --}}
                     <div class="w-full">
                         <x-forms.label for="card_no" value="{{ __('Card number / Information') }}"/>
-                        <div id="card-element" class="p-2"></div>
+                        <x-forms.input id="card-holder-name" type="text" :value="auth()->user()->getName() ?? old('name-card')"/>
+                        <div id="card-element" class="p-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4"></div>
                     </div>
 
 
@@ -124,6 +125,41 @@
             const clientSecret = cardButton.dataset.secret;
 
             cardElement.mount('#card-element');
+
+            cardElement.addEventListener('change', function(event){
+                const displayError = document.getElementById('card-errors');
+                if(event.error){
+                    displayError.textContent = event.error.message;
+                } else{
+                    displayError.textContent = '';
+                }
+            });
+
+            //Handle form submission
+            const subscriptionForm = document.getElementById('subscription-form');
+
+            subscriptionForm.addEventListener('submit', function (event){
+                event.preventDefault();
+                stripe
+                .handleCardSetup(clientSecret, cardElement, {
+                    payment_method_data: {
+                        billing_details: {
+                            name: cardHolderName.value
+                        }
+                    }
+                })
+                .then(function(result) {
+                    if (result.error) {
+                        // Inform the user if there was an error.
+                        var errorElement = document.getElementById('card-errors');
+                        errorElement.textContent = result.error.message;
+                    } else {
+                        const paymentMethodInput = document.getElementById('payment-method');
+                        paymentMethodInput.value = result.setupIntent.payment_method;
+                        paymentForm.submit();
+                    }
+                });
+            });
         </script>
         @endpush
 @endsection
