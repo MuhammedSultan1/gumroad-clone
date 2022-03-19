@@ -32,6 +32,12 @@ class User extends Authenticatable
         'email',
         'password',
         'type',
+        'line1',
+        'line2',
+        'city',
+        'state',
+        'country',
+        'postal_code',
         'stripe_id',
     ];
 
@@ -89,5 +95,35 @@ class User extends Authenticatable
     public function getProfileImage(): string
     {
         return $this->profile_image;
+    }
+
+    public function getLineOne(): string
+    {
+        return $this->line1;
+    }
+
+    public function getLineTwo(): string
+    {
+        return $this->line2;
+    }
+
+    public function getCity(): string
+    {
+        return $this->city;
+    }
+
+    public function getState(): string
+    {
+        return $this->state;
+    }
+
+    public function getCountry(): string
+    {
+        return $this->country;
+    }
+
+    public function getPostalCode(): string
+    {
+        return $this->postal_code;
     }
 }
