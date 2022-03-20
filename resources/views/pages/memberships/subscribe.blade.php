@@ -8,12 +8,12 @@
                         <p class="text-3xl lg:text-4xl dark:text-white font-semibold leading-7 lg:leading-9 text-gray-800">Check out</p>
                     </div>
                     <div class="mt-2">
-                        <a href="javascript:void(0)" class="text-base dark:text-gray-400 leading-4 underline hover:text-gray-800 text-gray-600">Back to my bag</a>
+                        <a href="#" class="text-base dark:text-gray-400 leading-4 underline hover:text-gray-800 text-gray-600">Back to my bag</a>
                     </div>
                     <div class="mt-12">
                         <p class="text-xl font-semibold dark:text-white leading-5 text-gray-800">Shipping Details</p>
                     </div>
-                    <form id="subscription-form" action="" method="POST" class="mt-8 flex flex-col justify-start items-start w-full space-y-8">
+                    <form id="subscription-form" action="{{ route('subscribe.store') }}" method="POST" class="mt-8 flex flex-col justify-start items-start w-full space-y-8">
                         @csrf
 
                         {{-- Hidden Inputs --}}
@@ -63,10 +63,14 @@
                         <x-forms.label for="country" value="{{ __('country') }}"/>
                         <x-forms.input id="country" name="country" :value="auth()->user()->getCountry() ?? old('country')"/>
                     </div>
-                    {{-- Card Details --}}
+                    {{-- Name on card --}}
                     <div class="w-full">
-                        <x-forms.label for="card_no" value="{{ __('Card number / Information') }}"/>
-                        <x-forms.input id="card-holder-name" type="text" :value="auth()->user()->getName() ?? old('name-card')"/>
+                        <x-forms.label for="card_name" value="{{ __('Name on card') }}"/>
+                        <x-forms.input id="card-holder-name" type="text" name="card-name" :value="auth()->user()->getName() ?? old('name-card')"/>
+                    </div>
+                    {{-- Card information --}}
+                    <div class="w-full">
+                        <x-forms.label for="card_no" value="{{ __('Card information') }}"/>
                         <div id="card-element" class="p-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4"></div>
                     </div>
 
@@ -77,7 +81,7 @@
                         <button id="card-button" data-secret="{{ $intent->client_secret }}" type="submit" class="bg-gray-900 focus:outline-none dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 py-4 w-full md:w-4/12 lg:w-full text-white">Proceed to payment</button>
                     </form>
                     <div class="mt-4 flex justify-start items-center w-full">
-                        <a href="javascript:void(0)" class="text-base leading-4 dark:text-gray-400 hover:underline focus:outline-none focus:text-gray-500 hover:text-gray-800 text-gray-600">Back to my bag</a>
+                        <a href="#" class="text-base leading-4 dark:text-gray-400 hover:underline focus:outline-none focus:text-gray-500 hover:text-gray-800 text-gray-600">Back to my bag</a>
                     </div>
                 </div>
 
