@@ -50,8 +50,22 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <a href="#" class="text-gray-800">Sign Up</a>
-    <button class="rounded-full m-2 py-2 px-6 bg-gray-800 hover:bg-gray-900 text-white">Sign In</button>
+    @if (Auth::check())
+        <p class="text-gray-800">
+           Welcome, {{ Str::ucfirst(auth()->user()->name) }}!
+        </p>
+      <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-responsive-nav-link>
+     </form>
+    @else
+    <a href="{{ route('register') }}" class="text-gray-800">Sign Up</a>
+    <a href="{{ route('login') }}" class="rounded-full m-2 py-2 px-6 bg-gray-800 hover:bg-gray-900 text-white">Sign In</a>
+    @endif
   </div>
 </div>
 {{-- End Navbar --}}
