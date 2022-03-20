@@ -13,9 +13,11 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, Billable;
 
-    const ADMIN = 3;
-    const MERCHANT = 2;
-    const DEFAULT = 1;
+    const ADMIN = 'admin';
+    const BASIC_MERCHANT = 'basicMerchant';
+    const PRO_MERCHANT = 'proMerchant';
+    const ENTERPRISE_MERCHANT = 'enterpriseMerchant';
+    const DEFAULT = 'normalUser';
 
     const TABLE = 'users';
 
@@ -132,9 +134,19 @@ class User extends Authenticatable
         return $this->type() === self::ADMIN;
     }
 
-    public function isMerchant(): bool
+    public function isBasicMerchant(): bool
     {
-        return $this->type() === self::MERCHANT;
+        return $this->type() === self::BASIC_MERCHANT;
+    }
+
+    public function isProMerchant(): bool
+    {
+        return $this->type() === self::PRO_MERCHANT;
+    }
+
+    public function isEnterpriseMerchant(): bool
+    {
+        return $this->type() === self::ENTERPRISE_MERCHANT;
     }
 
     public function isDefault(): bool
