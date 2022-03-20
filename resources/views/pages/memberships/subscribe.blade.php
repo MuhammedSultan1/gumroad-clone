@@ -160,7 +160,7 @@
                     } else {
                         const paymentMethodInput = document.getElementById('payment-method');
                         paymentMethodInput.value = result.setupIntent.payment_method;
-                        paymentForm.submit();
+                        subscriptionForm.submit();
                     }
                 });
             });
