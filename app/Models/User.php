@@ -13,11 +13,11 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, Billable;
 
-    const ADMIN = 'admin';
-    const BASIC_MERCHANT = 'basicMerchant';
-    const PRO_MERCHANT = 'proMerchant';
-    const ENTERPRISE_MERCHANT = 'enterpriseMerchant';
-    const DEFAULT = 'normalUser';
+    const ADMIN = 'Admin';
+    const BASIC_MERCHANT = 'Basic';
+    const PRO_MERCHANT = 'Pro';
+    const ENTERPRISE_MERCHANT = 'Enterprise';
+    const DEFAULT = 'Normal';
 
     const TABLE = 'users';
 
