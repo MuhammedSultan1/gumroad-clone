@@ -46,24 +46,24 @@ Route::get('/shop', function () {
 //     return view('pages.merchants.dashboard.billing.index');
 // })->middleware(['auth', 'is_merchant'])->name('merchant.dashboard');
 
-Route::group(['middleware' => ['auth', 'role:normalUser'], 'prefix' => 'user'], function () {
+Route::group(['middleware' => ['auth', 'role:Normal'], 'prefix' => 'user'], function () {
     Route::get('/dashboard', [App\Http\Controllers\Merchant\Basic\Dashboard\IndexController::class, 'index'])->name('user.dashboard');
 });
 
-Route::group(['middleware' => ['auth', 'role:basicMerchant'], 'prefix' => 'basic'], function () {
+Route::group(['middleware' => ['auth', 'role:Basic'], 'prefix' => 'basic'], function () {
     Route::get('/dashboard', [App\Http\Controllers\Merchant\Basic\Dashboard\IndexController::class, 'index'])->name('basic.dashboard');
 });
 
-Route::group(['middleware' => ['auth', 'role:proMerchant'], 'prefix' => 'pro'], function () {
+Route::group(['middleware' => ['auth', 'role:Pro'], 'prefix' => 'pro'], function () {
     Route::get('/dashboard', [App\Http\Controllers\Merchant\Pro\Dashboard\IndexController::class, 'index'])->name('pro.dashboard');
 });
 
-Route::group(['middleware' => ['auth', 'role:enterpriseMerchant'], 'prefix' => 'enterprise'], function () {
+Route::group(['middleware' => ['auth', 'role:Enterprise'], 'prefix' => 'enterprise'], function () {
     Route::get('/dashboard', [App\Http\Controllers\Merchant\Enterprise\Dashboard\IndexController::class, 'index'])->name('enterprise.dashboard');
 });
 
 // Admin Protected Routes
-Route::group(['middleware' => ['auth', 'role:admin'], 'prefix' => 'admin'], function () {
+Route::group(['middleware' => ['auth', 'role:Admin'], 'prefix' => 'admin'], function () {
     Route::get('/dashboard', [ViewMerchantsController::class, 'index'])->name('admin.dashboard');
 });
 
