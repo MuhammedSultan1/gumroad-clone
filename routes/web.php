@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Dashboard\ViewMerchantsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Stripe\MembershipsController;
 use App\Http\Controllers\Stripe\SubscriptionController;
@@ -33,12 +34,20 @@ Route::get('/shop', function () {
 });
 
 
-Route::get('/users/dashboard', function () {
-    return view('pages.users.dashboard.index');
-})->middleware(['auth'])->name('user.dashboard');
+// Route::get('/users/dashboard', function () {
+//     return view('pages.users.dashboard.index');
+// })->middleware(['auth', 'is_user'])->name('user.dashboard');
 
-Route::get('/merchants/dashboard', function () {
-    return view('pages.merchants.dashboard.billing.index');
-})->middleware(['auth'])->name('merchant.dashboard');
+
+// Route::get('/merchants/dashboard', function () {
+//     return view('pages.merchants.dashboard.billing.index');
+// })->middleware(['auth', 'is_merchant'])->name('merchant.dashboard');
+
+
+// Admin Protected Routes
+Route::group(['middleware' => ['auth', 'is_admin'], 'prefix' => 'admin'], function () {
+    Route::get('/dashboard', [ViewMerchantsController::class, 'index'])->name('admin.dashboard');
+});
+
 
 require __DIR__ . '/auth.php';
