@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Stripe;
 
 use Illuminate\Http\Request;
 use App\Models\MembershipPlan;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class SubscriptionController extends Controller
@@ -38,10 +39,12 @@ class SubscriptionController extends Controller
      */
     public function store(Request $request)
     {
+        //Get the user making the request.
         $user = $request->user();
 
         $paymentMethod = $request->input('payment-method');
 
+        //Update all of these columns.
         $user->update([
             'line1'         => $request->line1,
             'line2'         => $request->line2,
@@ -51,7 +54,14 @@ class SubscriptionController extends Controller
             'postal_code'   => $request->postal_code,
         ]);
 
+        // $plan = the membership plan they requested.
         $plan = MembershipPlan::where('stripe_name', $request->plan)->first();
+
+
+        //Change the user_type to the name of the membership plan they purchased.
+        DB::table('users')
+            ->where('id', $user->id)
+            ->update(['user_type' => $plan->name,]);
 
         $user->newSubscription($plan->stripe_name, $plan->stripe_price_id)
             ->create($paymentMethod);
