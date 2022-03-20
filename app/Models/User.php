@@ -13,9 +13,9 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, Billable;
 
-    const DEFAULT = 1;
-    const MERCHANT = 2;
     const ADMIN = 3;
+    const MERCHANT = 2;
+    const DEFAULT = 1;
 
     const TABLE = 'users';
 
@@ -125,5 +125,20 @@ class User extends Authenticatable
     public function getPostalCode(): string
     {
         return $this->postal_code;
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->type() === self::ADMIN;
+    }
+
+    public function isMerchant(): bool
+    {
+        return $this->type() === self::MERCHANT;
+    }
+
+    public function isDefault(): bool
+    {
+        return $this->type() === self::DEFAULT;
     }
 }
