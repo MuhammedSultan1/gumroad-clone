@@ -81,7 +81,7 @@
             </li>
 
           </ul>
-             <a href="#"
+             <a href="{{ route('subscribe', ['plan' => $membership->getStripeName()]) }}"
             class="bg-teal-500 inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md hover:bg-teal-600 focus:shadow-outline focus:outline-none"
           >
             Get Now
