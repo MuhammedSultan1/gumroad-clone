@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/memberships', [MembershipsController::class, 'index'])->name('memberships');
 // Subscriptions
 Route::get('/subscribe', [SubscriptionController::class, 'index'])->name('subscribe');
-Route::post('/subscribe', [SubscriptionController::class, 'post'])->name('subscribe.store');
+Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe.store');
 
 //Shop
 Route::get('/shop', function () {
