@@ -26,21 +26,21 @@ class UserSeeder extends Seeder
             'name' => 'Avery',
             'email'         => 'Avery@example.com',
             'password'      => bcrypt('password'),
-            'user_type'          => User::MERCHANT,
+            'user_type'          => User::BASIC_MERCHANT,
         ]);
 
         User::factory()->create([
             'name' => 'Hannah',
             'email'         => 'Hannah@example.com',
             'password'      => bcrypt('password'),
-            'user_type'          => User::MERCHANT,
+            'user_type'          => User::PRO_MERCHANT,
         ]);
 
         User::factory()->create([
             'name' => 'Fred',
             'email'         => 'Fred@example.com',
             'password'      => bcrypt('password'),
-            'user_type'          => User::MERCHANT,
+            'user_type'          => User::ENTERPRISE_MERCHANT,
         ]);
 
         // Default Users
