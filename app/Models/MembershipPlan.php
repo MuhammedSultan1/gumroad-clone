@@ -15,6 +15,11 @@ class MembershipPlan extends Model
         return $this->name;
     }
 
+    public function getStripeName(): string
+    {
+        return $this->stripe_name;
+    }
+
     public function getPrice(): int
     {
         return $this->price;
