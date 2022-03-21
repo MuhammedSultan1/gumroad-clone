@@ -31,7 +31,7 @@
                     {{-- Email --}}
                     <div class="w-full">
                         <x-forms.label for="email" value="{{ __('Email') }}"/>
-                        <x-forms.input id="email" name="email" :value="auth()->user()->getEmail()" disabled/>
+                        <x-forms.input id="email" name="email" :value="auth()->user()->getEmail() ?? old('email')" disabled/>
                       </div>
                     {{-- Address Line 1 --}}
                       <div class="w-full">
@@ -66,7 +66,7 @@
                     {{-- Name on card --}}
                     <div class="w-full">
                         <x-forms.label for="card_name" value="{{ __('Name on card') }}"/>
-                        <x-forms.input id="card-holder-name" type="text" name="card-name" :value="auth()->user()->getName() ?? old('name-card')"/>
+                        <x-forms.input id="card_holder_name" type="text" name="card_name" :value="old('card_name')" autocomplete="card_name"/>
                     </div>
                     {{-- Card information --}}
                     <div class="w-full">
@@ -123,7 +123,7 @@
 
             const elements = stripe.elements();
             const cardElement = elements.create('card');
-            const cardHolderName = document.getElementById('card-holder-name');
+            const cardHolderName = document.getElementById('card_holder_name');
             const cardButton = document.getElementById('card-button');
 
             const clientSecret = cardButton.dataset.secret;
