@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Merchant\Dashboard;
+namespace App\Http\Controllers\Merchant\Billing;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
