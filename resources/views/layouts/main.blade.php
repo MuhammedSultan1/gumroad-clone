@@ -67,6 +67,11 @@
     <a href="{{ route('login') }}" class="rounded-full m-2 py-2 px-6 bg-gray-800 hover:bg-gray-900 text-white">Sign In</a>
     @endif
   </div>
+  <div class="avatar">
+  <div class="w-9 rounded-full">
+    <img src="https://api.lorem.space/image/face?hash=92310" />
+  </div>
+</div>
 </div>
 {{-- End Navbar --}}
 @yield('content')
