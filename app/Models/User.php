@@ -8,6 +8,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use function Illuminate\Events\queueable;
+
 
 class User extends Authenticatable
 {
@@ -99,32 +101,32 @@ class User extends Authenticatable
         return $this->profile_image;
     }
 
-    public function getLineOne(): string
+    public function getLineOne()
     {
         return $this->line1;
     }
 
-    public function getLineTwo(): string
+    public function getLineTwo()
     {
         return $this->line2;
     }
 
-    public function getCity(): string
+    public function getCity()
     {
         return $this->city;
     }
 
-    public function getState(): string
+    public function getState()
     {
         return $this->state;
     }
 
-    public function getCountry(): string
+    public function getCountry()
     {
         return $this->country;
     }
 
-    public function getPostalCode(): string
+    public function getPostalCode()
     {
         return $this->postal_code;
     }
@@ -152,5 +154,26 @@ class User extends Authenticatable
     public function isDefault(): bool
     {
         return $this->type() === self::DEFAULT;
+    }
+
+    protected static function booted()
+    {
+        static::updated(queueable(function ($customer) {
+            if ($customer->hasStripeId()) {
+                $customer->syncStripeCustomerDetails();
+            }
+        }));
+    }
+
+    public function stripeAddress()
+    {
+        return [
+            'line1' => $this->getLineOne(),
+            'line2' => $this->getLineTwo(),
+            'city' => $this->getCity(),
+            'state' => $this->getState(),
+            'country' => $this->getCountry(),
+            'postal_code' => $this->getPostalCode(),
+        ];
     }
 }
