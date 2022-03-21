@@ -50,16 +50,21 @@ Route::group(['middleware' => ['auth', 'role:Normal'], 'prefix' => 'user'], func
     Route::get('/dashboard', [App\Http\Controllers\Merchant\Basic\Dashboard\IndexController::class, 'index'])->name('user.dashboard');
 });
 
-Route::group(['middleware' => ['auth', 'role:Basic'], 'prefix' => 'basic'], function () {
-    Route::get('/dashboard', [App\Http\Controllers\Merchant\Basic\Dashboard\IndexController::class, 'index'])->name('basic.dashboard');
+Route::group(['middleware' => ['auth', 'EnsureUserIsSubscribed'], 'prefix' => 'billing'], function () {
+    Route::get('/', [App\Http\Controllers\Merchant\Billing\BillingController::class, 'index'])->name('billing');
+    Route::get('/invoices/{invoice}', [App\Http\Controllers\Merchant\Billing\BillingController::class, 'show'])->name('billing.review.invoice');
 });
 
-Route::group(['middleware' => ['auth', 'role:Pro'], 'prefix' => 'pro'], function () {
-    Route::get('/dashboard', [App\Http\Controllers\Merchant\Pro\Dashboard\IndexController::class, 'index'])->name('pro.dashboard');
+Route::group(['middleware' => ['auth', 'role:Basic'], 'prefix' => 'basic/dashboard'], function () {
+    Route::get('/index', [App\Http\Controllers\Merchant\Basic\Dashboard\IndexController::class, 'index'])->name('basic.dashboard');
 });
 
-Route::group(['middleware' => ['auth', 'role:Enterprise'], 'prefix' => 'enterprise'], function () {
-    Route::get('/dashboard', [App\Http\Controllers\Merchant\Enterprise\Dashboard\IndexController::class, 'index'])->name('enterprise.dashboard');
+Route::group(['middleware' => ['auth', 'role:Pro'], 'prefix' => 'pro/dashboard'], function () {
+    Route::get('/index', [App\Http\Controllers\Merchant\Pro\Dashboard\IndexController::class, 'index'])->name('pro.dashboard');
+});
+
+Route::group(['middleware' => ['auth', 'role:Enterprise'], 'prefix' => 'enterprise/dashboard'], function () {
+    Route::get('/index', [App\Http\Controllers\Merchant\Enterprise\Dashboard\IndexController::class, 'index'])->name('enterprise.dashboard');
 });
 
 // Admin Protected Routes
