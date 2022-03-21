@@ -38,7 +38,7 @@ class MembershipPlanSeeder extends Seeder
             'description' => 'Everything in the Basic plan and more!',
             'stripe_name' => 'Pro Plan',
             'stripe_product_id' => 'prod_L9Ue2YT4RQnZax',
-            'stripe_price_id' => 'price_1KTBexCdtNxrS9O3iEtdhaxY',
+            'stripe_price_id' => 'price_1KTBfVCdtNxrS9O3p4npwJQI',
             'price' => 50,
         ]);
         MembershipPlan::create([
