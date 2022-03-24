@@ -96,37 +96,37 @@ class User extends Authenticatable
         return $this->email;
     }
 
-    public function getProfileImage(): string
+    public function getProfileImage(): ?string
     {
         return $this->profile_image;
     }
 
-    public function getLineOne()
+    public function getLineOne(): ?string
     {
         return $this->line1;
     }
 
-    public function getLineTwo()
+    public function getLineTwo(): ?string
     {
         return $this->line2;
     }
 
-    public function getCity()
+    public function getCity(): ?string
     {
         return $this->city;
     }
 
-    public function getState()
+    public function getState(): ?string
     {
         return $this->state;
     }
 
-    public function getCountry()
+    public function getCountry(): ?string
     {
         return $this->country;
     }
 
-    public function getPostalCode()
+    public function getPostalCode(): ?string
     {
         return $this->postal_code;
     }
