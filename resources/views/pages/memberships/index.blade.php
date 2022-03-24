@@ -42,7 +42,11 @@
             </div>
           </div>
           <ul class="mb-8 space-y-2">
-
+            @SubscribedToProduct(auth()->user(),$membership->getStripeProductId(), $membership->getStripeName())
+            <h2 class="font-medium text-teal-300">
+                You are currently subscribed to this membership plan.
+            </h2>
+            @endSubscribedToProduct
             <li class="flex items-center">
               <div class="mr-3">
                 <svg class="w-4 h-4 text-teal-400" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
