@@ -9,6 +9,19 @@ class MembershipPlan extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'name',
+        'slug',
+        'stripe_name',
+        'stripe_product_id',
+        'stripe_price_id',
+        'price',
+    ];
 
     public function getName(): string
     {
@@ -16,6 +29,16 @@ class MembershipPlan extends Model
     }
 
     public function getStripeName(): string
+    {
+        return $this->stripe_name;
+    }
+
+    public function getStripeProductId(): string
+    {
+        return $this->stripe_name;
+    }
+
+    public function getStripePriceId(): string
     {
         return $this->stripe_name;
     }
