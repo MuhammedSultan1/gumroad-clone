@@ -35,12 +35,12 @@ class MembershipPlan extends Model
 
     public function getStripeProductId(): string
     {
-        return $this->stripe_name;
+        return $this->stripe_product_id;
     }
 
     public function getStripePriceId(): string
     {
-        return $this->stripe_name;
+        return $this->stripe_price_id;
     }
 
     public function getPrice(): int
