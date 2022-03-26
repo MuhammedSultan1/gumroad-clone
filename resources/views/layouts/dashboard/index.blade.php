@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Windmill Dashboard</title>
+    <title>Dashboard</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -37,103 +37,201 @@
         <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
             class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-            href="#"
+            href="/"
           >
-            Windmill
+            DigitalCart
           </a>
           <ul class="mt-6">
-            <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
-                </svg>
-                <span class="ml-4">Dashboard</span>
-              </a>
-            </li>
-          </ul>
-          <ul>
-               <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="forms.html"
-              >
-                <img src="https://img.icons8.com/office/20/000000/shop.png"/>
-                <span class="ml-4">Go to shop</span>
-              </a>
-            </li>
-             <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="forms.html"
-              >
-<img src="https://img.icons8.com/color/27/000000/receipt.png"/>
-                <span class="ml-4">Billing</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="forms.html"
-              >
-<img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/22/000000/external-shopping-cart-sales-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"/>
-                <span class="ml-4">My Purchases</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
-              >
-             <img src="https://img.icons8.com/emoji/22/000000/package-.png"/>
-                <span class="ml-4">My Orders</span>
-              </a>
-            </li>
-               <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
-              >
-                <img src="https://img.icons8.com/tiny-color/16/000000/experimental-star-tiny-color.png"/>
-                <span class="ml-4">My Reviews</span>
-              </a>
-            </li>
-               <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
-              >
-<img src="https://img.icons8.com/external-sbts2018-flat-sbts2018/17/000000/external-comment-social-media-basic-1-sbts2018-flat-sbts2018.png"/>
-                <span class="ml-4">My Comments</span>
-              </a>
-            </li>
+
+              <x-dashboard.sidebar-link>
+                 <x-slot:svg>
+                            <svg
+                            class="w-5 h-5"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            >
+                            <path
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                            ></path>
+                            </svg>
+                </x-slot:svg>
+
+                <x-slot:route>
+                   dashboard
+                </x-slot>
+
+                <x-slot:slot>
+                  Dashboard
+                </x-slot>
+              </x-dashboard.sidebar-link>
 
           </ul>
+          <ul>
+              @if (auth()->check() && auth()->user()->isAdmin())
+             <x-dashboard.sidebar-link>
+                 <x-slot:svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   {{ route('admin.viewMerchants') }}
+                </x-slot>
+                <x-slot:slot>
+                   View Merchants
+                </x-slot>
+              </x-dashboard.sidebar-link>
+            @endif
+            @if (auth()->check() && auth()->user()->isAdmin())
+             <x-dashboard.sidebar-link>
+                 <x-slot:svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   {{ route('admin.viewCustomers') }}
+                </x-slot>
+                <x-slot:slot>
+                   View Customers
+                </x-slot>
+              </x-dashboard.sidebar-link>
+            @endif
+            @if (auth()->check() && auth()->user()->isAdmin())
+              <x-dashboard.sidebar-link>
+                  <x-slot:svg>
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   {{ route('admin.viewProducts') }}
+                </x-slot>
+                <x-slot:slot>
+                   View Products
+                </x-slot>
+              </x-dashboard.sidebar-link>
+            @endif
+              <x-dashboard.sidebar-link>
+                <x-slot:svg>
+                                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+</svg>
+                </x-slot:svg>
+
+                <x-slot:route>
+                    {{ route('shop') }}
+                </x-slot>
+                <x-slot:slot>
+                    Go to shop
+                </x-slot>
+              </x-dashboard.sidebar-link>
+
+            @if (auth()->check() && auth()->user()->isBasicMerchant() || auth()->user()->isProMerchant() || auth()->user()->isEnterpriseMerchant())
+
+            <x-dashboard.sidebar-link>
+                <x-slot:svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   billing
+                </x-slot>
+                <x-slot:slot>
+                   Billing
+                </x-slot>
+              </x-dashboard.sidebar-link>
+            @endif
+
+            @if (auth()->check() && auth()->user()->isBasicMerchant() || auth()->user()->isProMerchant() || auth()->user()->isEnterpriseMerchant())
+              <x-dashboard.sidebar-link>
+                  <x-slot:svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   my products
+                </x-slot>
+                <x-slot:slot>
+                  My Products
+                </x-slot>
+              </x-dashboard.sidebar-link>
+            @endif
+              <x-dashboard.sidebar-link>
+                  <x-slot:svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   my purchases
+                </x-slot>
+                <x-slot:slot>
+                   My Purchases
+                </x-slot>
+              </x-dashboard.sidebar-link>
+
+              <x-dashboard.sidebar-link>
+                  <x-slot:svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   my orders
+                </x-slot>
+                <x-slot:slot>
+                   My Orders
+                </x-slot>
+              </x-dashboard.sidebar-link>
+
+              <x-dashboard.sidebar-link>
+                  <x-slot:svg>
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   my reviews
+                </x-slot>
+                <x-slot:slot>
+                   My Reviews
+                </x-slot>
+              </x-dashboard.sidebar-link>
+
+              <x-dashboard.sidebar-link>
+                  <x-slot:svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+</svg>
+                </x-slot:svg>
+                <x-slot:route>
+                   my comments
+                </x-slot>
+                <x-slot:slot>
+                  My Comments
+                </x-slot>
+              </x-dashboard.sidebar-link>
+
+          </ul>
+        @if (auth()->check() && auth()->user()->isBasicMerchant() || auth()->user()->isProMerchant() || auth()->user()->isEnterpriseMerchant() || auth()->check() && auth()->user()->isAdmin() )
           <div class="px-6 my-6">
             <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
-              Create account
+              Create a product
               <span class="ml-2" aria-hidden="true">+</span>
             </button>
           </div>
+          @endif
         </div>
       </aside>
       <!-- Mobile sidebar -->
