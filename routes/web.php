@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Stripe\MembershipsController;
+use App\Http\Controllers\Merchant\CreateShopController;
 use App\Http\Controllers\Stripe\SubscriptionController;
 use App\Http\Controllers\Admin\Dashboard\ViewSalesController;
 use App\Http\Controllers\Admin\Dashboard\ViewProductsController;
@@ -54,6 +55,9 @@ Route::group(['middleware' => ['auth', 'EnsureUserIsSubscribed'], 'prefix' => 'b
     Route::get('/', [App\Http\Controllers\Merchant\Billing\BillingController::class, 'index'])->name('billing');
     Route::get('/invoices/{invoice}', [App\Http\Controllers\Merchant\Billing\BillingController::class, 'show'])->name('billing.review.invoice');
 });
+
+Route::get('/welcome', [CreateShopController::class, 'index'])->middleware(['auth', 'EnsureUserIsSubscribed'])->name('create.shop');
+
 
 // Route::group(['middleware' => ['auth', 'role:Basic'], 'prefix' => 'basic/dashboard'], function () {
 //     Route::get('/index', [App\Http\Controllers\Merchant\Basic\Dashboard\IndexController::class, 'index'])->name('basic.dashboard');
