@@ -35,7 +35,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'type',
+        'user_type',
         'line1',
         'line2',
         'city',
@@ -86,9 +86,9 @@ class User extends Authenticatable
         return $this->last_name;
     }
 
-    public function getUserType(): int
+    public function getUserType(): string
     {
-        return $this->type;
+        return $this->user_type;
     }
 
     public function getEmail(): string
@@ -133,27 +133,27 @@ class User extends Authenticatable
 
     public function isAdmin(): bool
     {
-        return $this->type() === self::ADMIN;
+        return $this->getUserType() === self::ADMIN;
     }
 
     public function isBasicMerchant(): bool
     {
-        return $this->type() === self::BASIC_MERCHANT;
+        return $this->getUserType() === self::BASIC_MERCHANT;
     }
 
     public function isProMerchant(): bool
     {
-        return $this->type() === self::PRO_MERCHANT;
+        return $this->getUserType() === self::PRO_MERCHANT;
     }
 
     public function isEnterpriseMerchant(): bool
     {
-        return $this->type() === self::ENTERPRISE_MERCHANT;
+        return $this->getUserType() === self::ENTERPRISE_MERCHANT;
     }
 
     public function isDefault(): bool
     {
-        return $this->type() === self::DEFAULT;
+        return $this->getUserType() === self::DEFAULT;
     }
 
     protected static function booted()
