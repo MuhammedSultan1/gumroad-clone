@@ -70,7 +70,7 @@ class SubscriptionController extends Controller
             'trial_ends_at' => NULL,
         ]);
 
-        return redirect()->route('billing')->with('success', 'Thank you for subscribing!');
+        return redirect()->route('create.shop')->with('success', 'Thank you for subscribing!');
     }
 
     /**
