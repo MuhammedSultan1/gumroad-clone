@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('short_description')->nullable();
+            $table->string('cover_photo');
             $table->string('description');
             $table->bigInteger('price');
             $table->timestamps();
