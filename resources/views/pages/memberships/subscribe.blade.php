@@ -74,11 +74,10 @@
                         <div id="card-element" class="p-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4"></div>
                     </div>
 
-
-
                         <div id="card-errors" class="text-red-500 font-semibold"></div>
 
-                        <button id="card-button" data-secret="{{ $intent->client_secret }}" type="submit" class="bg-gray-900 focus:outline-none dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 py-4 w-full md:w-4/12 lg:w-full text-white">Proceed to payment</button>
+                        {{-- <button id="card-button" data-secret="{{ $intent->client_secret }}" type="submit" class="focus:outline-none dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Proceed to payment</button> --}}
+                        <button id="card-button" data-secret="{{ $intent->client_secret }}" type="submit" class="btn btn-wide">Proceed to payment</button>
                     </form>
                     <div class="mt-4 flex justify-start items-center w-full">
                         <a href="#" class="text-base leading-4 dark:text-gray-400 hover:underline focus:outline-none focus:text-gray-500 hover:text-gray-800 text-gray-600">Back to my bag</a>
