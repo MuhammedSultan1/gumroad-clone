@@ -4,39 +4,57 @@
 
 <div class="container mx-auto p-4 bg-white">
   <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
-    <h1 class="text-lg font-bold">Register</h1>
+    <h1 class="text-lg font-bold">Register Your Shop</h1>
     <form class="flex flex-col mt-4">
         @csrf
+        {{-- First Name --}}
         <div class="">
              <input
                 type="text"
                 name="first_name"
                 class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm"
                 placeholder="First Name"
+                required="required"
             />
         </div>
+        {{-- End First Name --}}
+        {{-- Last Name --}}
    <div class="">
        <input
           type="text"
           name="last_name"
           class="px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm"
           placeholder="Last Name"
+          required="required"
       />
     </div>
+    {{-- End Last Name --}}
+{{-- Upload Profile Picture --}}
+<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="user_avatar">Upload file</label>
+<input class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+<div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">Your profile picture</div>
+{{-- End Upload Profile Picture --}}
+
+{{-- Shop name --}}
     <div class="flex">
         <input
             type="text"
             name="shop_name"
             class="px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm"
-            placeholder="Shop Name"
+            placeholder="The name of your shop"
+            required="required"
         >
        <span class="px-4 py-3 mt-4 w-1/3 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">.digitalcart.com</span>
     </div>
-<label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+    {{-- End Shop Name --}}
+    {{-- Bio --}}
+<label for="message" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your Bio</label>
 <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tell us about yourself or what you're selling"></textarea>
-    <div class="flex justify-center">
-  <div class="mb-3 xl:w-96">
-    <select class="form-select appearance-none
+   {{-- End Bio --}}
+   {{-- Select Country --}}
+<div class="flex justify-center">
+  <div class="mb-3 xl:w-full">
+    <select name="country" id="country" required class="form-select appearance-none
       block
       w-full
       px-3
@@ -52,30 +70,36 @@
       ease-in-out
       m-0
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-        <option selected>Country</option>
-        <option value="1">USA</option>
-        <option value="2">Canada</option>
-        <option value="3">UK</option>
+        <option selected disabled value="">Country</option>
+        <option value="USA">USA</option>
+        <option value="CANADA">Canada</option>
+        <option value="UK">UK</option>
     </select>
   </div>
 </div>
+{{-- End Select Country --}}
+{{-- Zip Code --}}
   <div class="">
        <input
           type="text"
           name="zip_code"
           class="px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm"
           placeholder="Zip Code"
+          required="required"
       />
     </div>
-<button
+    {{-- End Zip Code --}}
+        {{-- Register Button --}}
+    <button
           type="#"
           class="mt-4 px-4 py-3  leading-6 text-base rounded-md border border-transparent text-white bg-gray-900 hover:text-white focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 cursor-pointer inline-flex w-full justify-center items-center font-medium focus:outline-none"
       >
         Register
       </button>
+      {{-- End Register Button --}}
       <div class="flex flex-col items-center mt-5">
         <p class="mt-1 text-xs font-light text-gray-500">
-          Register already?<a class="ml-1 font-medium text-blue-400">Sign in now</a>
+          Want to set up shop later?<a class="ml-1 font-medium text-blue-400">Skip for now</a>
           </p>
       </div>
     </form>
