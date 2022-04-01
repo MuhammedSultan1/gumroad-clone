@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mx-auto p-4 bg-white">
+<!-- <div class="container mx-auto p-4 bg-white">
   <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
     <h1 class="text-lg font-bold">Register Your Shop</h1>
     <form class="flex flex-col mt-4">
@@ -103,6 +103,64 @@
           </p>
       </div>
     </form>
+  </div>
+</div> -->
+<div class="flex justify-center items-center 2xl:container 2xl:mx-auto lg:py-16 md:py-12 py-9 px-4 md:px-6 lg:px-20 xl:px-44">
+  <div class="flex w-full sm:w-9/12 lg:w-full flex-col lg:flex-row justify-center items-center lg:space-x-10 2xl:space-x-36 space-y-12 lg:space-y-0">
+    <div class="flex w-full flex-col justify-start items-start">
+      <div class="">
+        <p class="text-3xl lg:text-4xl dark:text-white font-semibold leading-7 lg:leading-9 text-gray-800">Set Up Your New Shop!</p>
+      </div>
+      <div class="mt-2">
+        <a href="#" class="text-base dark:text-gray-400 leading-4 underline hover:text-gray-800 text-gray-600">Skip for now</a>
+      </div>
+      <div class="mt-12">
+        <p class="text-xl font-semibold dark:text-white leading-5 text-gray-800">Your Details</p>
+      </div>
+      <form id="subscription-form" action="{{ route('subscribe.store') }}" method="POST" class="mt-8 flex flex-col justify-start items-start w-full space-y-8">
+        @csrf
+
+        {{-- First Name --}}
+        <div class="w-full">
+          <x-forms.label for="first_name" value="{{ __('First Name') }}" />
+          <x-forms.input id="first_name" name="first_name" :value="auth()->user()->getName() ?? old('name')" autocomplete="given-name" required="required" />
+        </div>
+        {{-- Last Name --}}
+        <div class="w-full">
+          <x-forms.label for="last_name" value="{{ __('Last Name') }}" />
+          <x-forms.input id="last_name" name="last_name" autocomplete="family-name" required="required" />
+        </div>
+        {{-- Shop Name --}}
+        <x-forms.label for="shop_name" value="{{ __('Shop Name') }}" />
+        <div class="w-full flex">
+          <x-forms.input id="shop_name" name="shop_name" autocomplete="off" placeholder="Shop Name" required="required" />
+          <span class="px-4 py-3 mt-4 rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">.digitalcart.com</span>
+        </div>
+        {{-- Select Your Country --}}
+        <select required class="select select-bordered w-full max-w-xs">
+          <option selected disabled value="">Country</option>
+          <option>USA</option>
+          <option>CANADA</option>
+        </select>
+        {{-- Postal Code --}}
+        <div class="w-full">
+          <x-forms.label for="postal_code" value="{{ __('ZIP or postal code') }}" />
+          <x-forms.input id="postal_code" name="postal_code" :value="auth()->user()->getPostalCode() ?? old('postal_code')" required="required" />
+        </div>
+        {{-- Bio / Information About Your Store --}}
+
+        <textarea class="textarea textarea-bordered w-full" placeholder="Tell us about you and what you are selling." required="required"></textarea>
+
+
+
+
+        <div id="card-errors" class="text-red-500 font-semibold"></div>
+
+        {{-- <button id="card-button" data-secret="#" type="submit" class="focus:outline-none dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Proceed to payment</button> --}}
+        <button id="card-button" data-secret="#" type="submit" class="btn btn-wide">Create shop</button>
+      </form>
+    </div>
+
   </div>
 </div>
 @endsection
