@@ -23,6 +23,8 @@ return new class extends Migration
             $table->bigInteger('price');
             $table->unsignedBigInteger('number_available');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('store_id')->references('id')->on('stores')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
