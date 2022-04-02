@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('cover_photo');
             $table->string('description');
             $table->bigInteger('price');
+            $table->unsignedBigInteger('number_available');
             $table->timestamps();
         });
     }
