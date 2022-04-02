@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Stripe\MembershipsController;
 use App\Http\Controllers\Merchant\CreateShopController;
 use App\Http\Controllers\Stripe\SubscriptionController;
-use App\Http\Controllers\Admin\Dashboard\ViewSalesController;
-use App\Http\Controllers\Admin\Dashboard\ViewProductsController;
-use App\Http\Controllers\Admin\Dashboard\ViewCustomersController;
-use App\Http\Controllers\Admin\Dashboard\ViewMerchantsController;
+use App\Http\Controllers\Admin\Dashboard\SalesController;
+use App\Http\Controllers\Admin\Dashboard\ProductsController;
+use App\Http\Controllers\Admin\Dashboard\CustomersController;
+use App\Http\Controllers\Admin\Dashboard\MerchantsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +58,10 @@ Route::group(['middleware' => ['auth', 'EnsureUserIsSubscribed'], 'prefix' => 'b
 
 Route::get('/welcome', [CreateShopController::class, 'index'])->middleware(['auth', 'EnsureUserIsSubscribed'])->name('create.shop');
 
+// Route::domain('{subdomain}.' . config('app.short_url'))->group(function () {
+//     Route::get('/', ProductsController::class, 'index');
+//     Route::resource('/products', ProductsController::class)->only(['index', 'show']);
+// });
 
 // Route::group(['middleware' => ['auth', 'role:Basic'], 'prefix' => 'basic/dashboard'], function () {
 //     Route::get('/index', [App\Http\Controllers\Merchant\Basic\Dashboard\IndexController::class, 'index'])->name('basic.dashboard');
@@ -79,10 +83,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function () {
 });
 // Dashboard routes that are for the admin
 Route::group(['middleware' => ['auth', 'role:Admin'], 'prefix' => 'dashboard'], function () {
-    Route::get('/sales', [ViewSalesController::class, 'index'])->name('admin.viewSales');
-    Route::get('/merchants', [ViewMerchantsController::class, 'index'])->name('admin.viewMerchants');
-    Route::get('/customers', [ViewCustomersController::class, 'index'])->name('admin.viewCustomers');
-    Route::get('/products', [ViewProductsController::class, 'index'])->name('admin.viewProducts');
+    Route::resource('/sales', [SalesController::class, 'index']);
+    Route::resource('/merchants', [MerchantsController::class, 'index']);
+    Route::resource('/customers', [CustomersController::class, 'index']);
+    Route::resource('/products', [ProductsController::class, 'index']);
 });
 
 
