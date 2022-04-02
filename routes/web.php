@@ -78,9 +78,9 @@ Route::get('/welcome', [CreateShopController::class, 'index'])->middleware(['aut
 
 // Dashboard routes which any authenticated user can visit
 Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function () {
-    Route::get('/', [ViewMerchantsController::class, 'index'])->name('dashboard');
-    Route::get('/comments', [ViewMerchantsController::class, 'index'])->name('viewComments');
-    Route::get('/orders', [ViewMerchantsController::class, 'index'])->name('viewOrders');
+    Route::get('/', [MerchantsController::class, 'index'])->name('dashboard');
+    Route::get('/comments', [MerchantsController::class, 'index'])->name('viewComments');
+    Route::get('/orders', [MerchantsController::class, 'index'])->name('viewOrders');
 });
 // Dashboard routes that are for the admin
 Route::group(['middleware' => ['auth', 'role:Admin'], 'prefix' => 'dashboard'], function () {
