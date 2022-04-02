@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('subdomain');
             $table->unsignedBigInteger('sales');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->constrained()->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
