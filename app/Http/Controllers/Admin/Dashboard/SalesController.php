@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ViewProductsController extends Controller
+class SalesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ViewProductsController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.dashboard.viewProducts');
+        return view('pages.admin.dashboard.index');
     }
 
     /**
