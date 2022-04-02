@@ -61,6 +61,7 @@ Route::get('/welcome', [CreateShopController::class, 'index'])->middleware(['aut
 // Route::domain('{subdomain}.' . config('app.short_url'))->group(function () {
 //     Route::get('/', ProductsController::class, 'index');
 //     Route::resource('/products', ProductsController::class)->only(['index', 'show']);
+//     Route::get('/products/{id}', ProductsController::class, 'show');
 // });
 
 // Route::group(['middleware' => ['auth', 'role:Basic'], 'prefix' => 'basic/dashboard'], function () {
@@ -83,10 +84,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function () {
 });
 // Dashboard routes that are for the admin
 Route::group(['middleware' => ['auth', 'role:Admin'], 'prefix' => 'dashboard'], function () {
-    Route::resource('/sales', [SalesController::class, 'index']);
-    Route::resource('/merchants', [MerchantsController::class, 'index']);
-    Route::resource('/customers', [CustomersController::class, 'index']);
-    Route::resource('/products', [ProductsController::class, 'index']);
+    Route::resource('/sales', SalesController::class);
+    Route::resource('/merchants', MerchantsController::class);
+    Route::resource('/customers', CustomersController::class);
+    Route::resource('/products', ProductsController::class);
 });
 
 
